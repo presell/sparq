@@ -3033,5 +3033,3 @@ $('.brandslider').slick({
 
 
 });
-
-

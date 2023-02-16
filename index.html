@@ -7,9 +7,14 @@
 <title>Sparq Vitamin Air® | Order Now</title>
 <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
 <link href="css/style.css" rel="stylesheet" type="text/css">
+<!-- Latest compiled and minified CSS -->
+ 
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<!-- Latest compiled JavaScript --> 
 <script src="js/jquery-1.11.2.min.js"></script>
 <script src="js/bootstrap.js"></script>
-<script src="js/script.js"></script>
+<script src="./js/script.js"></script>
 </head>
 <body>
 <div class="logosec">
@@ -143,13 +148,13 @@
                         <div class="col-xl-7 prodcol">
                           <div class="text-center">
                             <div class="varientbox active">
-                              <input type="radio" name="flavor" class="checker">
+                              <input type="radio" name="flavor" class="checker" checked  id="strawberry">
                               <div class="straberryouter">
                                 <div class="straberryinner"></div>
                               </div>
                               <span>Strawberry</span></div>
                             <div class="varientbox">
-                              <input type="radio" name="flavor" class="checker">
+                              <input type="radio" name="flavor" class="checker" id="vanila">
                               <div class="vanilaouter">
                                 <div class="vanilainner"></div>
                               </div>
@@ -158,13 +163,13 @@
                         </div>
                       </div>
                     </div>
-                    <div class="text-center d-none d-xl-block"><a href="#" class="btn-default pl-0 pr-0 w-100"><span>FEEL THE DIFFERENCE</span><img src="images/fingericon.png" width="25" height="16" alt=""></a>
+                    <div class="text-center d-none d-xl-block"><a href="#" class="btn-default pl-0 pr-0 w-100" id="differance"><span>FEEL THE DIFFERENCE</span><img src="images/fingericon.png" width="25" height="16" alt=""></a>
                       <div class="mt-2"><img src="images/paymentcard.png" width="240" height="24" alt=""></div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="text-center mt-lg-4 d-xl-none mobprodbtnouter"><a href="#" id="get2" class="btn-default pl-0 pr-0 w-100"><span>FEEL THE DIFFERENCE</span><img src="images/fingericon.png" width="25" height="16" alt=""></a>
+              <div class="text-center mt-lg-4 d-xl-none mobprodbtnouter"><a href="#" id="get2" class="btn-default pl-0 pr-0 w-100" id="differance"><span>FEEL THE DIFFERENCE</span><img src="images/fingericon.png" width="25" height="16" alt=""></a>
                 <div class="mt-2 paycard"><img src="images/paymentcard.png" width="240" height="24" alt=""></div>
               </div>
             </div>
@@ -330,6 +335,41 @@
     </div>
   </div>
 </div>
+
+<script>
+  $("#strawberry").click(function(){
+    // alert("The paragraph was clicked.");
+      $("#strawberry").attr('checked', 'checked');
+      $("#vanila").removeAttr("checked");
+  });
+  
+  $("#vanila").click(function(){
+    // alert("The paragraph was clicked.");
+      $("#vanila").attr('checked', 'checked');
+      $("#strawberry").removeAttr("checked");
+  });
+  
+  
+  $("#differance").click(function(){
+    // alert("The paragraph was clicked.");
+   if($('#strawberry').is(':checked')) { 
+      //  alert("it's checked"); 
+  window.location.href = 'https://shop.lifehacksplus.com/cart/39394788108:1,39394868748:1,39394817036:1?discount=FREE&note=LHP-noprice';
+   }
+  });
+  
+  $("#differance").click(function(){
+    // alert("The paragraph was clicked.");
+   if($('#vanila').is(':checked')) { 
+      //  alert("it's checked"); 
+  window.location.href = ' https://shop.lifehacksplus.com/cart/39394788236:1,39394868940:1,39394817164:1?discount=FREE&note=LHP-noprice';
+   }
+  });
+</script>
+
+
+
+
 <script>
 
 $(".varientbox").click(function(){
